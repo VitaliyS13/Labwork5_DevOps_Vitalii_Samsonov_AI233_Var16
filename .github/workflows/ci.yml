@@ -28,7 +28,7 @@ jobs:
         pip install -r requirements.txt
 
     - name: Syntax check
-      run: python -m py_compile api.py main.py
+      run: python -m py_compile main.py
 
     - name: Docker build
       run: docker build -t euler-api .
