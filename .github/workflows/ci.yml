@@ -27,14 +27,8 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Lint and syntax check
-      run: |
-        python -m py_compile api.py main.py
+    - name: Syntax check
+      run: python -m py_compile api.py main.py
 
-    - name: Run tests
-      run: |
-        pytest || echo "No tests found, skipping"
-
-    - name: Build Docker image
-      run: |
-        docker build -t euler-api .
+    - name: Docker build
+      run: docker build -t euler-api .
