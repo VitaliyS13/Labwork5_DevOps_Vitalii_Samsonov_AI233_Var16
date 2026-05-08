@@ -1,0 +1,12 @@
+# Test your FastAPI endpoints
+
+GET http://127.0.0.1:8000/
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8000/calculate?x0=1.6&y0=4.6&a=1.6&b=2.6&h=0.1
+Accept: application/json
+
+
+###
